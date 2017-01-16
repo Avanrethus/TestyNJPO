@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import Test.Losowe.LosoweLiczby;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -16,25 +17,16 @@ import static org.junit.Assert.*;
  * @author Windows
  */
 public class TestSortowania {
-    
-    public TestSortowania() {
+    @Test
+    public void TestSortowania() {
+        long czasPrzewidywany = 1000;
+        long czasSortowania;
+        LosoweLiczby ll = new LosoweLiczby();
+        czasSortowania = ll.LosujLiczby();
+        assertEquals("Czas",czasPrzewidywany, czasSortowania,500);
     }
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
     
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
